@@ -9,8 +9,10 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 
 ## 목차
+  - [네이밍](#네이밍)
   - [변수](#변수)
 
+## 네이밍
 ### 변수
 - 변수 이름은 `lowerCammerCase`를 사용해주세요.
 - 배열과 같이 복수의 의미를 담고있는 변수라면 끝에 **s**를 붙여서 사용해주세요.
@@ -25,3 +27,11 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     var category: [String]
     var show: Bool
     ```
+
+
+## Reference
+- [Google Swift Style Guide](https://google.github.io/swift/)
+- [Airbnb Swift Style Guide](https://github.com/airbnb/swift)
+- [Linkedin Swift Style Guide](https://github.com/linkedin/swift-style-guide)
+- [Raywenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
+- [StyleShare Swift Style Guide](https://github.com/StyleShare/swift-style-guide#%EC%B5%9C%EB%8C%80-%EC%A4%84-%EA%B8%B8%EC%9D%B4)
