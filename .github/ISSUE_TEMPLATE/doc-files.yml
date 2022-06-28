@@ -1,0 +1,32 @@
+name: 📄 문서 자료
+description: 문서에 필요한 자료 저장
+title: "[문서 자료] <제목>"
+labels: ["📄 문서 자료"]
+body:
+- type: textarea
+  id: photo
+  attributes:
+    label: 사진
+    description: 문서에 필요한 사진 파일을 업로드합니다.
+    placeholder: |
+      사진을 드래그하여 업로드하세요..
+  validations:
+    required: false
+- type: textarea
+  id: video
+  attributes:
+    label: 비디오
+    description: 문서에 필요한 영상 파일을 업로드합니다.
+    placeholder: |
+      영상을 드래그하여 업로드하세요..
+  validations:
+    required: false
+- type: textarea
+  id: etc
+  attributes:
+    label: 기타
+    description: 문서에 필요한 기타 파일을 업로드합니다.
+    placeholder: |
+      파일을 드래그하여 업로드하세요..
+  validations:
+    required: false

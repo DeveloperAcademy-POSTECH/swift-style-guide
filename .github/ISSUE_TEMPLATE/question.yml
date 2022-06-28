@@ -1,0 +1,13 @@
+name: ✋ 질문/건의사항
+description: 질문 혹은 건의할 사항
+title: "[질문/건의사항] <제목>"
+labels: ["✋ 질문/건의사항"]
+body:
+- type: textarea
+  id: content
+  attributes:
+    label: 내용
+    description: 질문/건의할 사항을 자유롭게 남겨주세요.
+    placeholder: ex. CreateML을 연습해 볼 수 있는 실습 자료가 있을까요?
+  validations:
+    required: true

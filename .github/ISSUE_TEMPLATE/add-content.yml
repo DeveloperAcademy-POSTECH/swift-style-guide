@@ -1,0 +1,45 @@
+name: ➕ 내용 추가
+description: 추가해야할 내용
+title: "[내용 추가] <제목>"
+labels: ["➕ 내용 추가"]
+body:
+- type: checkboxes
+  id: duplicate
+  attributes:
+    label: 이슈 중복 확인
+    description: 본 이슈가 중복이 아닌지 검색을 통해 확인해주세요.
+    options:
+    - label: 검색을 통해 중복되지 않은 이슈임을 확인
+      required: true
+- type: input
+  id: category
+  attributes:
+    label: 카테고리
+    description: 프레임워크가 위치하는 카테고리를 작성해주세요.
+    placeholder: ex. 증강현실
+  validations:
+    required: true
+- type: input
+  id: name
+  attributes:
+    label: 프레임워크 이름
+    description: 프레임워크/Kit의 이름을 작성해주세요.
+    placeholder: ex. RealityKit
+  validations:
+    required: true
+- type: input
+  id: url
+  attributes:
+    label: 프레임워크 공식문서 URL
+    description: 프레임워크 공식문서 URL을 작성해주세요.
+    placeholder: ex. https://developer.apple.com/documentation/coreml
+  validations:
+    required: true
+- type: checkboxes
+  id: pr
+  attributes:
+    label: 풀리퀘스트 여부
+    description: 풀리퀘스트를 요청하셨나요?
+    options:
+    - label: 풀리퀘스트 완료
+      required: false
