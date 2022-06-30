@@ -3,14 +3,14 @@ description: 오탈자 및 잘못된 내용 신고
 title: "[오탈자 신고] <제목>"
 labels: ["👻 오탈자 및 잘못된 내용"]
 body:
-- type: checkboxes
+- type: input
   id: duplicate
   attributes:
     label: 이슈 중복 확인
-    description: 본 이슈가 중복이 아닌지 검색을 통해 확인해주세요.
-    options:
-    - label: 검색을 통해 중복되지 않은 이슈임을 확인
-      required: true
+    description: 본 이슈가 중복이 아닌지 검색을 통해 확인하셨나요?
+    placeholder: 확인했습니다.
+  validations:
+    required: true
 - type: input
   id: category
   attributes:
