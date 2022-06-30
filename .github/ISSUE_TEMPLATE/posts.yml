@@ -1,0 +1,10 @@
+name: 📃 자유 글
+title: "[자유 글] <제목>"
+description: 공유하고 싶은 자유 주제의 포스팅
+body:
+- type: textarea
+  id: content
+  attributes:
+    label: 내용
+    description: 공유하고 싶은 글을 자유롭게 남겨주세요.
+    placeholder: ex. 이 리포지토리를 어떤 정책으로 운영하면 좋을지 한번 이야기를 나눠보면 어떨까요?
