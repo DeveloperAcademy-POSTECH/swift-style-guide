@@ -27,11 +27,3 @@ body:
     placeholder: ex. 복수형의 이름을 s로만 구분하면 눈에 잘 띄지 않는 것 같아요
   validations:
     required: true
-- type: checkboxes
-  id: pr
-  attributes:
-    label: 풀리퀘스트 여부
-    description: 풀리퀘스트를 요청하셨나요?
-    options:
-    - label: 풀리퀘스트 완료
-      required: false
