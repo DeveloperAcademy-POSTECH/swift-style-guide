@@ -1,7 +1,7 @@
-name: 🐞 오탈자 신고
+name: 👻 오탈자 신고
 description: 오탈자 및 잘못된 내용 신고
 title: "[오탈자 신고] <제목>"
-labels: ["🐞 오탈자 및 잘못된 내용"]
+labels: ["👻 오탈자 및 잘못된 내용"]
 body:
 - type: checkboxes
   id: duplicate

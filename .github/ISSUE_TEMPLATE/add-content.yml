@@ -1,7 +1,7 @@
-name: 🎁 내용 추가
+name: ✨ 내용 추가
 description: 추가해야할 스타일 가이드
 title: "[내용 추가] <제목>"
-labels: ["🎁 내용 추가"]
+labels: ["✨ 내용 추가"]
 body:
 - type: checkboxes
   id: duplicate
