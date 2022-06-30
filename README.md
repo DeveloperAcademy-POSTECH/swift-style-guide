@@ -29,7 +29,22 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     var category: [String]
     var show: Bool
     ```
-
+### 약어
+  - 약어는 가능하면 피해주세요.
+  - 약어를 사용한다면 웹 검색으로 쉽게 찾을 수 있어야 해요.
+  - 약어로 시작되는 경우는 소문자로, 아닌 경우 모든 문자를 대문자로 작성해 주세요.
+    - **Good ✅**
+    ```swift
+    var id: String
+    var imageURL: URL
+    func setBackgroundColor()
+    ```
+    - **Bad ❌**
+    ```swift
+    var ID: String
+    var imageUrl: URL
+    func setBkgdColor()
+    ```
 
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
