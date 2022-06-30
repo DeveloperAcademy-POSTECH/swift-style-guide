@@ -19,11 +19,3 @@ body:
     placeholder: ex. Naming of Delegates, Closure Expressions
   validations:
     required: true
-- type: checkboxes
-  id: pr
-  attributes:
-    label: 풀리퀘스트 여부
-    description: 풀리퀘스트를 요청하셨나요?
-    options:
-    - label: 풀리퀘스트 완료
-      required: false
