@@ -13,6 +13,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 ## 목차
   - [네이밍](#네이밍)
     - [변수](#변수)
+  - [주석](#주석)
 
 
 ## 네이밍
@@ -30,6 +31,77 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     var category: [String]
     var show: Bool
     ```
+
+## 주석
+> 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
+- 설명은 최대한 간결하고 핵심 요약에 집중해서 작성해주세요.
+- 함수와 메소드는 기본적으로 무엇을 하는지 무엇을 반환하는지 설명해주시고,  
+널효과나 void 반환은 생략합니다.
+
+  - **Good ✅**
+    ```swift
+    /// 사용자 데이터를 추가합니다.
+    /// - Parameter name: user fullname
+    /// - Parameter age: user age
+    func addData(name: String, age: Int){
+      // code to add data...
+    }
+    ```
+
+    ```swift
+    /// DB내 사용자 이름과 ID로 나이를 조회합니다.
+    /// - Parameter ID: user ID
+    /// - Parameter name: user fullname
+    /// - Returns: user age
+    func readData(ID: Int, name: String){
+      var age: Int
+      // code to read data...
+      return age
+    }
+    ```
+
+  - **Bad ❌**
+    ```swift
+    // 사용자 데이터 추가
+    func addData(name: String, age: Int){
+      // return void
+    }
+    ```
+
+- 연관된 코드가 있다면 //MARK: 를 사용하여 코드영역을 구분지는것을 권장합니다.  
+  - **Example 💡**
+      ```swift
+      //MARK: - Gryffindor
+      let password = "Fotuna Major"
+      struct Students{
+        let Harry: String
+        let Ron: String
+        let Hermione: String
+      }
+
+      //MARK: - Slytherin  
+      class Slytherin {
+        let Voldemort: String
+        let Malfoy: String
+        func deadlyCurse() {
+          print("Avada Kedavra!")
+        }
+      }
+      ```
+
+- 아직 개발이 완료되지 않은 코드가 있다면 TODO나 FIXME를 사용하여 체크하는 것도 좋습니다.
+  - **Example 💡**
+      ```swift
+      //FIXME: - 버그 수정 필요
+      public func buggyFunc(){
+        // buggy code..
+      }
+
+      //TODO: - 문자열 인코딩 함수 작업 계획 
+      private func todoFunc(){
+        // tbd..
+      }
+      ```
 
 
 ## Reference
