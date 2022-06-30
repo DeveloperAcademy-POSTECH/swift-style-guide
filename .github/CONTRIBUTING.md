@@ -9,8 +9,8 @@ swift-style-guide는 여러분의 소중한 기여를 통해 성장하고 있습
 
 1. 새로운 이슈를 추가하기 전에 중복인지 아닌지 검색을 통해 이전 이슈들을 확인해주세요.
 2. 새로운 컨벤션 또는 기존 컨벤션의 업데이트 제안을 환영합니다.
-3. 이슈에서 메인테이너의 본인 할당을 받으신 다음에 진행해주세요. (동시에 여러사람이 같은 작업을 막기 위해서 입니다.) 
-4. PR의 단위는 스타일 가이트의 컨벤션 입니다. (예시 : https://github.com/DeveloperAcademy-POSTECH/swift-style-guide/pull/1)
+3. 이슈에서 메인테이너의 본인 할당을 받으신 다음에 진행해주세요. (동시에 여러사람이 같은 작업을 막기 위해서 입니다.)
+4. PR의 단위는 스타일 가이드의 컨벤션 입니다. (예시 : https://github.com/DeveloperAcademy-POSTECH/swift-style-guide/pull/1)
 
 - **각 켄벤션마다 개별 PR 요청을 해주세요.**
 
