@@ -1,7 +1,7 @@
-name: 🐞 오탈자 신고
-description: 오탈자 및 잘못된 내용 신고
-title: "[오탈자 신고] <제목>"
-labels: ["🐞 오탈자 및 잘못된 내용"]
+name: 🥊 바꾸고 싶은 내용!
+description: 수정 및 삭제할 내용
+title: "[내용 수정 및 삭제] <제목>"
+labels: ["🥊 바꾸고 싶은 내용!"]
 body:
 - type: checkboxes
   id: duplicate
@@ -20,11 +20,11 @@ body:
   validations:
     required: true
 - type: textarea
-  id: content
+  id: reason
   attributes:
-    label: 내용
-    description: 해당 내용의 잘못된 부분을 작성해주세요. 
-    placeholder: ex. ~의 내용은 ~ 부분이 잘못되어 ~라고 수정이 필요합니다.
+    label: 수정 이유
+    description: 해당 내용의 수정 및 삭제가 필요한 이유를 간단하게 작성해주세요.
+    placeholder: ex. 복수형의 이름을 s로만 구분하면 눈에 잘 띄지 않는 것 같아요
   validations:
     required: true
 - type: checkboxes
