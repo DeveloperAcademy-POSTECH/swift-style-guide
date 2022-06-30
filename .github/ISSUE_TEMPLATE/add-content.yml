@@ -1,7 +1,7 @@
-name: ➕ 내용 추가
-description: 추가해야할 내용
+name: 🎁 내용 추가
+description: 추가해야할 스타일 가이드
 title: "[내용 추가] <제목>"
-labels: ["➕ 내용 추가"]
+labels: ["🎁 내용 추가"]
 body:
 - type: checkboxes
   id: duplicate
@@ -15,24 +15,8 @@ body:
   id: category
   attributes:
     label: 카테고리
-    description: 프레임워크가 위치하는 카테고리를 작성해주세요.
-    placeholder: ex. 증강현실
-  validations:
-    required: true
-- type: input
-  id: name
-  attributes:
-    label: 프레임워크 이름
-    description: 프레임워크/Kit의 이름을 작성해주세요.
-    placeholder: ex. RealityKit
-  validations:
-    required: true
-- type: input
-  id: url
-  attributes:
-    label: 프레임워크 공식문서 URL
-    description: 프레임워크 공식문서 URL을 작성해주세요.
-    placeholder: ex. https://developer.apple.com/documentation/coreml
+    description: 스타일 가이드 항목에 해당되는 카테고리를 작성해주세요.
+    placeholder: ex. Naming of Delegates, Closure Expressions
   validations:
     required: true
 - type: checkboxes
