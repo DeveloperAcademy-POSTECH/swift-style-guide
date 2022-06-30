@@ -16,7 +16,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 ## 네이밍
 ### 변수
-- 변수 이름은 `lowerCammerCase`를 사용해주세요.
+- 변수 이름은 `lowerCamelCase`를 사용해주세요.
 - 배열과 같이 복수의 의미를 담고있는 변수라면 끝에 **s**를 붙여서 사용해주세요.
   - **Good ✅**
     ```swift
