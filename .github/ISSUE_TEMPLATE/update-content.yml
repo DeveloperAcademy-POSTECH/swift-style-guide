@@ -3,14 +3,14 @@ description: 수정 및 삭제할 내용
 title: "[내용 수정 및 삭제] <제목>"
 labels: ["🥊 바꾸고 싶은 내용!"]
 body:
-- type: checkboxes
+- type: input
   id: duplicate
   attributes:
     label: 이슈 중복 확인
     description: 본 이슈가 중복이 아닌지 검색을 통해 확인해주세요.
-    options:
-    - label: 검색을 통해 중복되지 않은 이슈임을 확인
-      required: true
+    placeholder: 확인했습니다.
+  validations:
+    required: true
 - type: input
   id: category
   attributes:
