@@ -7,7 +7,7 @@ body:
   id: duplicate
   attributes:
     label: 이슈 중복 확인
-    description: 본 이슈가 중복이 아닌지 검색을 통해 확인해주세요.
+    description: 본 이슈가 중복이 아닌지 검색을 통해 확인하셨나요?
     placeholder: 확인했습니다.
   validations:
     required: true
