@@ -14,6 +14,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 1. [네이밍](#네이밍)
    1. [변수](#변수)
    2. [함수](#함수)
+   3. 델리게이트
+1. 코드 구성
+   1. 미사용 코드
+1. 접근제어자
+1. 클래스와 스트럭트
+1. 함수호출
+1. 클로져
+1. 메모리 관리
+
 
 ## 네이밍
 ### 변수
@@ -39,15 +48,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     - **Good ✅**
         ```swift
         class AcademyViewController {
-        
+
           private func didFinishSession() {
             // ...
           }
-        
+
           private func willFinishSession() {
             // ...
           }
-        
+
           private func scheduleDidChange() {
             // ...
         	}
@@ -56,15 +65,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     - **Bad ❌**
         ```swift
         class AcademyViewController {
-        
+
           private func handleSessionEnd() {
             // ...
           }
-        
+
           private func finishSession() {
             // ...
           }
-        
+
           private func scheduleChanged() {
             // ...
           }
