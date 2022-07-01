@@ -11,10 +11,10 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 
 ## 목차
-  - [네이밍](#네이밍)
-    - [변수](#변수)
-    - [함수](#함수)
-  - [주석](#주석)
+  1. [네이밍](#네이밍)
+    1. [변수](#변수)
+    2. [함수](#함수)
+  2. [주석](#주석)
 
 ## 네이밍
 ### 변수
@@ -126,7 +126,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       ```swift
       // MARK: - Gryffindor
       let password = "Fotuna Major"
-      struct Students {
+      struct Gryffindor {
         let harry: String
         let ron: String
         let hermione: String
