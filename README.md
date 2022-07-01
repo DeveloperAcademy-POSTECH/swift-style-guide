@@ -96,7 +96,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     /// 사용자 데이터를 추가합니다.
     /// - Parameter name: user fullname
     /// - Parameter age: user age
-    func addData(name: String, age: Int){
+    func addData(name: String, age: Int) {
       // code to add data...
     }
     ```
@@ -106,7 +106,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     /// - Parameter ID: user ID
     /// - Parameter name: user fullname
     /// - Returns: user age
-    func readData(ID: Int, name: String){
+    func readData(ID: Int, name: String) {
       var age: Int
       // code to read data...
       return age
@@ -116,26 +116,26 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
   - **Bad ❌**
     ```swift
     // 사용자 데이터 추가
-    func addData(name: String, age: Int){
+    func addData(name: String, age: Int) {
       // return void
     }
     ```
 
-- 연관된 코드가 있다면 //MARK: 를 사용하여 코드영역을 구분지는것을 권장합니다.  
+- 연관된 코드가 있다면 MARK를 사용하여 코드영역을 구분지는것을 권장합니다.  
   - **Example 💡**
       ```swift
-      //MARK: - Gryffindor
+      // MARK: - Gryffindor
       let password = "Fotuna Major"
-      struct Students{
-        let Harry: String
-        let Ron: String
-        let Hermione: String
+      struct Students {
+        let harry: String
+        let ron: String
+        let hermione: String
       }
 
-      //MARK: - Slytherin  
+      // MARK: - Slytherin  
       class Slytherin {
-        let Voldemort: String
-        let Malfoy: String
+        let voldemort: String
+        let malfoy: String
         func deadlyCurse() {
           print("Avada Kedavra!")
         }
@@ -145,13 +145,13 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 - 아직 개발이 완료되지 않은 코드가 있다면 TODO나 FIXME를 사용하여 체크하는 것도 좋습니다.
   - **Example 💡**
       ```swift
-      //FIXME: - 버그 수정 필요
-      public func buggyFunc(){
+      // FIXME: - 버그 수정 필요
+      public func buggyFunc() {
         // buggy code..
       }
 
-      //TODO: - 문자열 인코딩 함수 작업 계획 
-      private func todoFunc(){
+      // TODO: - 문자열 인코딩 함수 작업 계획 
+      private func todoFunc() {
         // tbd..
       }
       ```
