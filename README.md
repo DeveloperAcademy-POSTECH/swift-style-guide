@@ -84,7 +84,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```
 
 ## 띄어쓰기
-- 인덴테이션은 탭 1번과 스페이스 4개를 기본으로 합니다.
+- 인덴테이션은 스페이스바 4개를 기본으로 하되, 스페이스바 4개는 탭 1개의 역할을 합니다.
   - **Good ✅**
       ```swift
       func sayHiLeeo(isHappy: Bool) {
