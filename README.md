@@ -39,15 +39,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     - **Good ✅**
         ```swift
         class AcademyViewController {
-        
+
           private func didFinishSession() {
             // ...
           }
-        
+
           private func willFinishSession() {
             // ...
           }
-        
+
           private func scheduleDidChange() {
             // ...
         	}
@@ -56,15 +56,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     - **Bad ❌**
         ```swift
         class AcademyViewController {
-        
+
           private func handleSessionEnd() {
             // ...
           }
-        
+
           private func finishSession() {
             // ...
           }
-        
+
           private func scheduleChanged() {
             // ...
           }
@@ -82,6 +82,25 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```swift
         func getData(for user: User) -> Data?
         ```
+
+## 띄어쓰기
+- 인덴테이션은 스페이스바 4개를 기본으로 하되, 스페이스바 4개는 탭 1개의 역할을 합니다.
+  - **Good ✅**
+      ```swift
+      func sayHiLeeo(isHappy: Bool) {
+          if isHappy {
+              print("Hi Leeo!")
+          }
+      }
+      ```
+  - **Bad ❌**
+      ```swift
+      func sayHiLeeo(isHappy: Bool) {
+        if isHappy {
+          print("Hi Leeo!")
+        }
+      }
+      ```
 
 
 ## Reference
