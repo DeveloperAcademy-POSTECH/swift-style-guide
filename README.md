@@ -15,13 +15,16 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
    1. [변수](#변수)
    2. [함수](#함수)
    3. 델리게이트
-1. 코드 구성
+2. 코드 구성
    1. 미사용 코드
-1. 접근제어자
-1. 클래스와 스트럭트
-1. 함수호출
-1. 클로져
-1. 메모리 관리
+3. 접근제어자
+4. 클래스와 스트럭트
+5. 함수호출
+6. 클로져
+7. 타입
+    1. [타입 추론](#타입 추론)
+    2. [타입 어노테이션](#타입 어노테이션)
+8. 메모리 관리
 
 
 ## 네이밍
@@ -111,6 +114,51 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       }
       ```
 
+## 타입
+### 타입 추론
+- 컴팩트 코드를 선호하고 컴파일러가 단일 인스턴스의 상수나 변수의 타입을 추론하도록 합니다.
+- 필요한 경우 `CGFloat`나 `Int64`와 같은 경우는 특정 타입을 지정해줍니다.
+  - **Good ✅**
+    ```swift
+    let apple = "Developer"
+    let book1 = Book()
+    let age = 25
+    let frameWidth: CGFloat = 120
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    let apple: String = "Developer"
+    let book1: Book = Book()
+    let age: Int = 25
+    ```
+    
+### 타입 어노테이션    
+- 전체 제네릭 구문 `Array<T>`와 `Dictionary<T: U>` 보다는 단축 구문 `[T]`, `[T: U]`를 사용합니다.
+  - **Good ✅**
+    ```swift
+    var student: [String: String]?
+    var students: [String]?
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    var student: Dictionary<String, String>?
+    var students: Array<String>?
+    ``` 
+
+- 빈 배열과 딕셔너리 선언 시, 타입을 명시하는 것을 선호합니다.
+  - **Good ✅**
+    ```swift
+    var student: [String: String] = [:]
+    var students: [String] = []
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    var student = [String: String]()
+    var students = [String]()
+    ``` 
 
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
