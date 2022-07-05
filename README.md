@@ -110,7 +110,10 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         }
       }
       ```
-
+- 콜론(`:`)을 사용할 땐 콜론의 오른쪽으로 한 칸의 여백을 생성합니다.
+    ```swift
+    let leeo: HappyLeeo
+    ```
 
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
