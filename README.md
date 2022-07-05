@@ -92,7 +92,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         func getData(for user: User) -> Data?
         ```
 
-## 띄어쓰기
+## 들여쓰기
 - 인덴테이션은 스페이스바 4개를 기본으로 하되, 스페이스바 4개는 탭 1개의 역할을 합니다.
   - **Good ✅**
       ```swift
@@ -110,6 +110,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         }
       }
       ```
+      
+## 띄어쓰기
 - 콜론(`:`)을 사용할 땐 콜론의 오른쪽으로 한 칸의 여백을 생성합니다. 콜론의 왼쪽은 공백없이 코드를 작성합니다.
     ```swift
     let leeo: HappyLeeo
