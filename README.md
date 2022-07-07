@@ -11,17 +11,23 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 
 ## 목차
+
 1. [네이밍](#네이밍)
-   1. [변수](#변수)
-   2. [함수](#함수)
-   3. 델리게이트
-1. 코드 구성
+    1. [변수](#변수)
+    2. [함수](#함수)
+    3. 델리게이트
+2. [주석](#주석)
+3. [띄어쓰기](#띄어쓰기)
+4. 코드 구성
    1. 미사용 코드
-1. 접근제어자
-1. 클래스와 스트럭트
-1. 함수호출
-1. 클로져
-1. 메모리 관리
+5. 접근제어자
+6. 클래스와 스트럭트
+7. 함수호출
+8. 클로져
+9. 타입
+    1. [타입 추론](#타입-추론)
+    2. [타입 어노테이션](#타입-어노테이션)
+10. 메모리 관리
 
 
 ## 네이밍
@@ -92,6 +98,76 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         func getData(for user: User) -> Data?
         ```
 
+## 주석
+> 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
+- 설명은 최대한 간결하고 핵심 요약에 집중해서 작성해주세요.
+- 함수와 메소드는 기본적으로 무엇을 하는지 무엇을 반환하는지 설명해주시고,  
+널효과나 void 반환은 생략합니다.
+- 작성한 주석은 퀵헬프 메뉴에서 언제든지 조회가 가능합니다.
+
+  - **Good ✅**
+    ```swift
+    /// 사용자 데이터를 추가합니다.
+    /// - Parameter name: user fullname
+    /// - Parameter age: user age
+    func addData(name: String, age: Int) {
+      // code to add data...
+    }
+    ```
+
+    ```swift
+    /// DB내 사용자 이름과 ID로 나이를 조회합니다.
+    /// - Parameter ID: user ID
+    /// - Parameter name: user fullname
+    /// - Returns: user age
+    func readData(ID: Int, name: String) {
+      var age: Int
+      // code to read data...
+      return age
+    }
+    ```
+
+  - **Bad ❌**
+    ```swift
+    // 사용자 데이터 추가
+    func addData(name: String, age: Int) {
+      // return void
+    }
+    ```
+
+- 연관된 코드가 있다면 MARK를 사용하여 코드영역을 구분지는것을 권장합니다.  
+  - **Example 💡**
+      ```swift
+      // MARK: - Gryffindor
+      let password = "Fotuna Major"
+      struct Gryffindor {
+        let harry: String
+        let ron: String
+        let hermione: String
+      }
+
+      // MARK: - Slytherin  
+      class Slytherin {
+        let voldemort: String
+        let malfoy: String
+        func deadlyCurse() {
+          print("Avada Kedavra!")
+        }
+      }
+      ```
+
+- 아직 개발이 완료되지 않은 코드가 있다면 TODO나 FIXME를 사용하여 체크하는 것도 좋습니다.
+  - **Example 💡**
+      ```swift
+      // FIXME: - 버그 수정 필요
+      public func buggyFunc() {
+        // buggy code..
+      }
+
+      // TODO: - 문자열 인코딩 함수 작업 계획 
+      private func todoFunc() {
+        // tbd..
+
 ## 띄어쓰기
 - 인덴테이션은 스페이스바 4개를 기본으로 하되, 스페이스바 4개는 탭 1개의 역할을 합니다.
   - **Good ✅**
@@ -111,9 +187,56 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       }
       ```
 - 콜론(`:`)을 사용할 땐 콜론의 오른쪽으로 한 칸의 여백을 생성합니다. 콜론의 왼쪽은 공백없이 코드를 작성합니다.
+  - **Example 💡**
     ```swift
     let leeo: HappyLeeo
     ```
+
+## 타입
+### 타입 추론
+- 컴팩트 코드를 선호하고 컴파일러가 단일 인스턴스의 상수나 변수의 타입을 추론하도록 합니다.
+- 필요한 경우 `CGFloat`나 `Int64`와 같은 경우는 특정 타입을 지정해줍니다.
+  - **Good ✅**
+    ```swift
+    let apple = "Developer"
+    let book1 = Book()
+    let age = 25
+    let frameWidth: CGFloat = 120
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    let apple: String = "Developer"
+    let book1: Book = Book()
+    let age: Int = 25
+    ```
+    
+### 타입 어노테이션    
+- 전체 제네릭 구문 `Array<T>`와 `Dictionary<T: U>` 보다는 단축 구문 `[T]`, `[T: U]`를 사용합니다.
+  - **Good ✅**
+    ```swift
+    var student: [String: String]?
+    var students: [String]?
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    var student: Dictionary<String, String>?
+    var students: Array<String>?
+    ``` 
+
+- 빈 배열과 딕셔너리 선언 시, 타입을 명시하는 것을 선호합니다.
+  - **Good ✅**
+    ```swift
+    var student: [String: String] = [:]
+    var students: [String] = []
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    var student = [String: String]()
+    var students = [String]()
+    ``` 
 
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
