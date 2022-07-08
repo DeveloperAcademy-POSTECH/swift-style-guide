@@ -99,7 +99,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         func getData(for user: User) -> Data?
         ```
 ### 열거형
-- 열거형의 이름은 `upperCamelCase`를 사용해주세요.
+- 열거형의 이름은 `UpperCamelCase`를 사용해주세요.
 - 열거형의 각 case에는 `lowerCamelCase`를 사용해주세요.
    - **Good ✅**
         ```swift
@@ -110,7 +110,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```
     - **Bad ❌**
         ```swift
-            enum Result {
+            enum result {
               case .Success
               case .Failure
             }
