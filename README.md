@@ -15,7 +15,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 1. [네이밍](#네이밍)
     1. [변수](#변수)
     2. [함수](#함수)
-    3. 델리게이트
+    3. [열거형](#열거형)
+    4. 델리게이트
 2. [주석](#주석)
 3. [띄어쓰기](#띄어쓰기)
 4. 코드 구성
@@ -97,7 +98,23 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```swift
         func getData(for user: User) -> Data?
         ```
-
+### 열거형
+- 열거형의 이름은 `UpperCamelCase`를 사용해주세요.
+- 열거형의 각 case에는 `lowerCamelCase`를 사용해주세요.
+   - **Good ✅**
+        ```swift
+            enum Result {
+              case .success
+              case .failure
+            }
+        ```
+    - **Bad ❌**
+        ```swift
+            enum result {
+              case .Success
+              case .Failure
+            }
+        ```
 ## 주석
 > 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
 - 설명은 최대한 간결하고 핵심 요약에 집중해서 작성해주세요.
