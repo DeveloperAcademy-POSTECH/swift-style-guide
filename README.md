@@ -257,7 +257,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 ## 메모리 관리
 - 메모리 누수의 원인이 되는 순환 참조가 일어나지 않도록 주의해주세요.
-- 객체 간의 관계를 분석하면서 `weak`와 `unowned`를 사용하여 순환 참조를 방지할수 있습니다.
+- 객체 간의 관계를 분석하면서 `weak`와 `unowned`를 사용하여 순환 참조를 방지할 수 있습니다.
 - `weak` 참조 변수는 반드시 Optional 타입이어야 합니다.
   - **Good ✅**
     ```swift
@@ -273,7 +273,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         }
     }
 
-    // 객체 내의 인스턴스가 서로를 가리키고 있지만, weak 참조를 선언했기에 순환참조가 일어나지 않습니다.
+    // 객체 내의 인스턴스가 서로를 가리키고 있지만, weak 참조를 선언했기에 순환 참조가 일어나지 않습니다.
     var ex1: ExampleClass? = ExampleClass()
     var ex2: ExampleClass? = ExampleClass()
 
