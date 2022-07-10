@@ -16,9 +16,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     1. [변수](#변수)
     2. [함수](#함수)
     3. [열거형](#열거형)
-    4. [구조체](#구조체)
-    5. [클래스](#클래스)
-    6. 델리게이트
+    4. [구조체와 클래스](#구조체와-클래스)
+    5. 델리게이트
 2. [주석](#주석)
 3. [띄어쓰기](#띄어쓰기)
 4. 코드 구성
@@ -117,9 +116,9 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
               case .Failure
             }
         ```
-### 구조체
-- 구조체의 이름은 `UpperCamelCase`를 사용해주세요.
-- 구조체의 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
+### 구조체와 클래스
+- 구조체와 클래스의 이름은 `UpperCamelCase`를 사용해주세요.
+- 구조체와 클래스의 프로퍼티 및 메소드는 `lowerCamelCase`를 사용해주세요.
    - **Good ✅**
         ```swift
             struct LeftRectangle {
@@ -127,6 +126,18 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
                 var height: Int
 
                 func drawRectangle() {
+                    // ...
+                }
+            }
+        ```
+        ```swift
+            class Mentee {
+                let id: String
+                let session: String
+                var group: Int
+                var team: Int
+
+                func callOutMentor() {
                     // ...
                 }
             }
@@ -142,23 +153,6 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
                 }
             }
         ```
-### 클래스
-- 클래스의 이름은 `UpperCamelCase`를 사용해주세요.
-- 클래스의 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
-   - **Good ✅**
-        ```swift
-            class Mentee {
-                let id: String
-                let session: String
-                var group: Int
-                var team: Int
-
-                func callOutMentor() {
-                    // ...
-                }
-            }
-        ```
-    - **Bad ❌**
         ```swift
             class mentor {
                 let Id: String
