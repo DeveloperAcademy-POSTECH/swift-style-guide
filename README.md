@@ -127,8 +127,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
                 var height: Int
 
                 func drawRectangle() {
-                  // ...
-              }
+                    // ...
+                }
             }
         ```
     - **Bad ❌**
@@ -137,11 +137,11 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
                 var Width: Int
                 var Height: Int
 
-              func DrawRectangle() {
-                  // ...
-              }
+                func DrawRectangle() {
+                    // ...
+                }
             }
-         ```
+        ```
 ### 클래스
 - 클래스의 이름은 `UpperCamelCase`를 사용해주세요.
 - 클래스의 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
