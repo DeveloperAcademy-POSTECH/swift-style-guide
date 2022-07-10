@@ -262,15 +262,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
   - **Good ✅**
     ```swift
     class ExampleClass {
-      weak var example: ExmapleClass? = nil
-      
-      init(){
-          print("init class")
-      }
-      
-      deinit{
-          print("deinit class")
-      }
+        weak var example: ExmapleClass? = nil
+        
+        init(){
+            print("init class")
+        }
+        
+        deinit{
+            print("deinit class")
+        }
     }
 
     // 객체 내의 인스턴스가 서로를 가리키고 있지만, weak 참조를 선언했기에 순환참조가 일어나지 않습니다.
