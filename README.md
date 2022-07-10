@@ -119,7 +119,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```
 ### 구조체
 - 구조체의 이름은 `UpperCamelCase`를 사용해주세요.
-- 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
+- 구조체의 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
    - **Good ✅**
         ```swift
             struct LeftRectangle {
