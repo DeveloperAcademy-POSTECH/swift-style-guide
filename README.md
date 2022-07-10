@@ -16,7 +16,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     1. [변수](#변수)
     2. [함수](#함수)
     3. [열거형](#열거형)
-    4. 델리게이트
+    4. [클래스와 구조체](#클래스와 구조체)
+    5. 델리게이트
 2. [주석](#주석)
 3. [띄어쓰기](#띄어쓰기)
 4. 코드 구성
@@ -115,6 +116,39 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
               case .Failure
             }
         ```
+### 클래스와 구조체
+- 클래스와 구체의 이름은 `UpperCamelCase`를 사용해주세요.
+- 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
+   - **Good ✅**
+        ```swift
+            class JuniorLearner {
+                let id: String
+                let session: String
+            }
+            
+            struct LeftRectangle {
+                var width: Int
+                var height: Int
+
+                func drawRectangle() {
+                  // ...
+              }
+            }
+        ```
+    - **Bad ❌**
+        ```swift
+            class seniorMentor {
+                let Id: String
+            }
+            
+            struct rightRectangle {
+                var Width: Int
+                var Height: Int
+
+              func DrawRectangle() {
+                  // ...
+              }
+            }
 ## 주석
 > 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
 - 설명은 최대한 간결하고 핵심 요약에 집중해서 작성해주세요.
