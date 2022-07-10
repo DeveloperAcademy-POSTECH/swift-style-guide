@@ -118,7 +118,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
             }
         ```
 ### 구조체
-- 구체의 이름은 `UpperCamelCase`를 사용해주세요.
+- 구조체의 이름은 `UpperCamelCase`를 사용해주세요.
 - 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
    - **Good ✅**
         ```swift
@@ -143,7 +143,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
             }
 ### 클래스
 - 클래스의 이름은 `UpperCamelCase`를 사용해주세요.
-- 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
+- 클래스의 프로퍼티와 메소드는 `lowerCamelCase`를 사용해주세요.
    - **Good ✅**
         ```swift
             class Mentee {
