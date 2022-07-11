@@ -277,11 +277,10 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     var ex1: ExampleClass? = ExampleClass()
     var ex2: ExampleClass? = ExampleClass()
 
-    ex1?.testClass = ex2
-    ex2?.testClass = ex1
+    ex1?.example = ex2
+    ex2?.example = ex1
 
     ex1 = nil
-    test2 = nil
 
     // 출력결과
     // init class
