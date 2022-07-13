@@ -67,7 +67,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
             private func scheduleDidChange() {
                 // ...
-       	}
+            }
         }
         ```
     - **Bad ❌**
