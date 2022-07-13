@@ -176,7 +176,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     /// - Parameter name: user fullname
     /// - Parameter age: user age
     func addData(name: String, age: Int) {
-      // code to add data...
+        // code to add data...
     }
     ```
 
@@ -186,9 +186,9 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     /// - Parameter name: user fullname
     /// - Returns: user age
     func readData(ID: Int, name: String) {
-      var age: Int
-      // code to read data...
-      return age
+        var age: Int
+        // code to read data...
+        return age
     }
     ```
 
@@ -196,7 +196,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     ```swift
     // 사용자 데이터 추가
     func addData(name: String, age: Int) {
-      // return void
+        // return void
     }
     ```
 
@@ -206,18 +206,18 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       // MARK: - Gryffindor
       let password = "Fotuna Major"
       struct Gryffindor {
-        let harry: String
-        let ron: String
-        let hermione: String
+          let harry: String
+          let ron: String
+          let hermione: String
       }
 
       // MARK: - Slytherin  
       class Slytherin {
-        let voldemort: String
-        let malfoy: String
-        func deadlyCurse() {
-          print("Avada Kedavra!")
-        }
+          let voldemort: String
+          let malfoy: String
+          func deadlyCurse() {
+              print("Avada Kedavra!")
+          }
       }
       ```
 
@@ -226,12 +226,13 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       ```swift
       // FIXME: - 버그 수정 필요
       public func buggyFunc() {
-        // buggy code..
+          // buggy code..
       }
 
       // TODO: - 문자열 인코딩 함수 작업 계획 
       private func todoFunc() {
-        // tbd..
+          // tbd..
+      }
 
 ## 띄어쓰기
 - 인덴테이션은 스페이스바 4개를 기본으로 하되, 스페이스바 4개는 탭 1개의 역할을 합니다.
