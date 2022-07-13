@@ -58,16 +58,16 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         class AcademyViewController {
 
             private func didFinishSession() {
-            // ...
+                // ...
             }
 
             private func willFinishSession() {
-            // ...
+                // ...
             }
 
             private func scheduleDidChange() {
-            // ...
-        	}
+                // ...
+       	}
         }
         ```
     - **Bad ❌**
@@ -75,15 +75,15 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         class AcademyViewController {
 
             private func handleSessionEnd() {
-            // ...
+                // ...
             }
 
             private func finishSession() {
-            // ...
+                // ...
             }
 
             private func scheduleChanged() {
-            // ...
+                // ...
             }
         }
         ```
