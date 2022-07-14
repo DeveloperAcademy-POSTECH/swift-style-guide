@@ -57,34 +57,34 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         ```swift
         class AcademyViewController {
 
-          private func didFinishSession() {
-            // ...
-          }
+            private func didFinishSession() {
+                // ...
+            }
 
-          private func willFinishSession() {
-            // ...
-          }
+            private func willFinishSession() {
+                // ...
+            }
 
-          private func scheduleDidChange() {
-            // ...
-        	}
+            private func scheduleDidChange() {
+                // ...
+            }
         }
         ```
     - **Bad ❌**
         ```swift
         class AcademyViewController {
 
-          private func handleSessionEnd() {
-            // ...
-          }
+            private func handleSessionEnd() {
+                // ...
+            }
 
-          private func finishSession() {
-            // ...
-          }
+            private func finishSession() {
+                // ...
+            }
 
-          private func scheduleChanged() {
-            // ...
-          }
+            private func scheduleChanged() {
+                // ...
+            }
         }
         ```
 - 데이터를 가져오는 함수의 경우, `get` 사용을 지양하고 `request`, `fetch`을 적절하게 사용해주세요.
