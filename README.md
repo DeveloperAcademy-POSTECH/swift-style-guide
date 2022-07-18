@@ -25,7 +25,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 5. 접근제어자
 6. 클래스와 스트럭트
 7. 함수호출
-8. 클로져
+8. [클로져](#클로져)
+    1. [다중 후행 클로져](#다중-후행-클로져)
 9. 타입
     1. [타입 추론](#타입-추론)
     2. [타입 어노테이션](#타입-어노테이션)
@@ -257,6 +258,40 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     ```swift
     let leeo: HappyLeeo
     ```
+
+## 클로져
+### 다중 후행 클로져
+- 함수 또는 메서드의 형식 매개변수에서 클로져들만을 실 매개변수로 받는 경우 함수 또는 메서드 호출 시 함수 또는 메서드의 소괄호, 첫 번째 실 매개변수의 라벨, 실 매개변수 사이의 콤마를 생략합니다.
+  - **Good ✅**
+    ```swift
+    func doSomething(do: (String) -> Void, onSuccess: (Any) -> Void, onFailure: (Error) -> Void) {
+        // function body
+    }
+
+    doSomething { something in
+        // do closure
+    } onSuccess: { result in
+        // success closure
+    } onFailure: { error in
+        // failure closure
+    }
+    ```
+  
+  - **Bad ❌**
+    ```swift
+    func doSomething(do: (String) -> Void, onSuccess: (Any) -> Void, onFailure: (Error) -> Void) {
+        // function body
+    }
+
+    doSomething (do: { something in
+        // do closure
+    }, onSuccess: { result in
+        // success closure
+    }, onFailure: { error in
+        // failure closure
+    })
+    ```
+
 
 ## 타입
 ### 타입 추론
