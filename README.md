@@ -30,7 +30,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 9. 타입
     1. [타입 추론](#타입-추론)
     2. [타입 어노테이션](#타입-어노테이션)
-10. 메모리 관리
+10. [메모리 관리](#메모리-관리)
 
 
 ## 네이밍
@@ -338,6 +338,41 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     var student = [String: String]()
     var students = [String]()
     ``` 
+
+## 메모리 관리
+- 메모리 누수의 원인이 되는 순환 참조가 일어나지 않도록 주의해주세요.
+- 객체 간의 관계를 분석하면서 `weak`와 `unowned`를 사용하여 순환 참조를 방지할 수 있습니다.
+- `weak` 참조 변수는 반드시 Optional 타입이어야 합니다.
+  - **Good ✅**
+    ```swift
+    class ExampleClass {
+        weak var example: ExmapleClass? = nil
+        
+        init(){
+            print("init class")
+        }
+        
+        deinit{
+            print("deinit class")
+        }
+    }
+
+    // 객체 내의 인스턴스가 서로를 가리키고 있지만, weak 참조를 선언했기에 순환 참조가 일어나지 않습니다.
+    var ex1: ExampleClass? = ExampleClass()
+    var ex2: ExampleClass? = ExampleClass()
+
+    ex1?.example = ex2
+    ex2?.example = ex1
+
+    ex1 = nil
+    ex2 = nil
+
+    // 출력결과
+    // init class
+    // init class
+    // deinit class
+    // deinit class
+    ```
 
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
