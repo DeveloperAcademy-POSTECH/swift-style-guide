@@ -165,29 +165,36 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
             }
          ```
 ### 델리게이트
-- 함수의 첫번째 인자는 생략가능한 델리게이트의 소스 객체를 사용한다.
+- protocol을 이용해 delegate 패턴을 구현합니다.
+- 함수의 첫번째 인자는 생략가능한 델리게이트의 소스 객체를 사용합니다.
    - **Good ✅**
         ```swift
             // 델리게이트의 소스 객체만을 메서드의 인자로 받는 경우
-            func scrollViewDidBeginScrolling(_ scrollView: UIScrollView)
-            func scrollViewShouldScrollToTop(_ scrollVIew: UIScrollView) -> Bool
-            func numberOfSections(in scrollView: UIScrollView) -> Int
+            protocol UserScrollViewDelegate {
+                func scrollViewDidScroll(_ scrollView: UIScrollView)
+                func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool
+            }
 
             // 델리게이트의 소스 객체 다음에 추가적인 인자를 받는 경우
-            func tableView(
-                _ tableView: UITableView,
-                willDisplayCell cell: UITableViewCell,
-                cellForRowAt indexPath: IndexPath)
-            )
-            func tableView(
-                _ tableView: UITableView,
-                numberOfRowsInSection section: Int) -> Int
-            )
+            protocol UserTableViewDelegate {
+                func tableView(
+                    _ tableView: UITableView,
+                    willDisplayCell cell: Cell,
+                    cellForRowAt indexPath: IndexPath)
+                )
+                func tableView(
+                    _ tableView: UITableView,
+                    numberOfRowsInSection section: Int) -> Int
+                )
+            }
         ```
     - **Bad ❌**
         ```swift
-            func ScrollView(_ scrollView: UIScrollView)
-            func getImageSet() -> Image     
+            protocol UserViewDelegate {
+                func didScroll()
+                func willDisplay(cell: Cell)
+                func UserScrollView(_ scrollView: UIScrollView)
+            }  
         ```
 ## 주석
 > 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
