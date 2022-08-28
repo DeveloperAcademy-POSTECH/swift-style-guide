@@ -191,8 +191,11 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     - **Bad ❌**
         ```swift
             protocol UserViewDelegate {
+                // 인자를 생략한 경우
                 func didScroll()
+                // 델리게이트의 소스 객체를 인수로 사용하지 않은 경우
                 func willDisplay(cell: Cell)
+                // 함수명을 UpperCamelCase로 작성한 경우, 다른 클래스가 존재하면 컴파일 오류 발생
                 func UserScrollView(_ scrollView: UIScrollView)
             }  
         ```
