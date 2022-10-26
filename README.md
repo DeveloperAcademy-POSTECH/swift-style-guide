@@ -140,6 +140,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
    
 ### 구조체와 클래스
 - 구조체와 클래스의 이름은 `UpperCamelCase`를 사용해주세요.
+- 구조체와 함수의 이름 앞에 `prefix`를 붙이지 말아주세요.
 - 구조체와 클래스의 프로퍼티 및 메소드는 `lowerCamelCase`를 사용해주세요.
   <details>
   <summary>예제코드</summary>
@@ -169,7 +170,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       ```
     - **Bad ❌**
         ```swift
-        struct rightRectangle {
+        struct rwRightRectangle {
             var Width: Int
             var Height: Int
 
@@ -179,7 +180,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         }
         ```
         ```swift
-        class mentor {
+        class rwMentor {
             let Id: String
             var Group: Int
 
