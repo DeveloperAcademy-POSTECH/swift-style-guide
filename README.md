@@ -31,6 +31,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     1. [타입 추론](#타입-추론)
     2. [타입 어노테이션](#타입-어노테이션)
 10. [메모리 관리](#메모리-관리)
+11. [파일관리](#파일관리)
 
 
 ## 네이밍
@@ -168,29 +169,29 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
           }
       }
       ```
-    - **Bad ❌**
-        ```swift
-        struct rwRightRectangle {
-            var Width: Int
-            var Height: Int
+  - **Bad ❌**
+      ```swift
+      struct rwRightRectangle {
+          var Width: Int
+          var Height: Int
 
-            func DrawRectangle() {
-                // ...
-            }
-        }
-        ```
-        ```swift
-        class rwMentor {
-            let Id: String
-            var Group: Int
+          func DrawRectangle() {
+              // ...
+          }
+      }
+      ```
+      ```swift
+      class rwMentor {
+          let Id: String
+          var Group: Int
 
-            func GiveAdvice() {
-                // ...
-            }
-        }
-        ```
+          func GiveAdvice() {
+              // ...
+          }
+      }
+      ```
     </details>
-   
+
 ## 주석
 > 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
 - 설명은 최대한 간결하고 핵심 요약에 집중해서 작성해주세요.
@@ -343,8 +344,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         // failure closure
     })
     ```
-  </details>
-  
+  </details>  
 
 
 ## 타입
@@ -444,6 +444,53 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       // deinit class
       // deinit class
       ```
+  </details>
+
+## 파일관리
+- 파일 내에서 모듈 `import`를 알파벳순으로 지정하고 중복된 것들을 제거해주세요.
+  <details>
+      <summary>예제코드</summary>
+      
+      - **Good ✅**
+        ```swift
+        import Alamofire
+        import Foundation
+        import SnapKit
+        ```
+      
+      - **Bad ❌**
+        ```swift
+        import Foundation
+
+        import SnapKit
+        import Alamofire
+        import Foundation
+        ``` 
+  </details>
+
+- `Computed properties`와 `property observers`가 있는 `property`는 같은 종류의 선언 집합 끝에 나타나야 합니다.
+  <details>
+      <summary>예제코드</summary>
+      
+      - **Good ✅**
+        ```swift
+        var gravity: CGFloat
+        var atmosphere: Atmosphere {
+            didSet {
+                print("oh my god, the atmosphere changed")
+            }
+        }
+        ```
+      
+      - **Bad ❌**
+        ```swift
+        var atmosphere: Atmosphere {
+            didSet {
+                print("oh my god, the atmosphere changed")
+            }
+        }
+        var gravity: CGFloat
+        ``` 
   </details>
 
 ## Reference
