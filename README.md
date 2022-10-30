@@ -17,7 +17,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     2. [함수](#함수)
     3. [열거형](#열거형)
     4. [구조체와 클래스](#구조체와-클래스)
-    5. 델리게이트
+    5. [프로토콜](#프로토콜)
+    6. 델리게이트
 2. [주석](#주석)
 3. [띄어쓰기](#띄어쓰기)
 4. 코드 구성
@@ -189,6 +190,40 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
           func GiveAdvice() {
               // ...
           }
+      }
+      ```
+    </details>
+
+### 프로토콜
+- 구조를 나타내는 프로토콜은 명사로 작성해야합니다.
+- 무언가를 할 수 있음(능력)을 설명하는 프로토콜은 형용사로 작성해야합니다.
+  <details>
+  <summary>예제코드</summary>
+
+  - **Good ✅**
+      ```swift
+      protocol Car {
+          var speed: Int { get set }
+          var name: String { get }
+
+          func speedUp(speed: Int) -> Bool
+      }
+      ```
+      ```swift
+      protocol Drivable {
+          func accelerate(speed: Int) -> ()
+          func slowDown(speed: Int) -> ()
+      }
+      ```
+  - **Bad ❌**
+      ```swift
+      protocol Drivable {
+          var speed: Int { get set }
+          var name: String { get }
+
+          func speedUp(speed: Int) -> Bool
+          func accelerate(speed: Int) -> ()
+          func slowDown(speed: Int) -> ()
       }
       ```
     </details>
