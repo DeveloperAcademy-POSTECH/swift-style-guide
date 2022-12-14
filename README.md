@@ -18,7 +18,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     3. [열거형](#열거형)
     4. [구조체와 클래스](#구조체와-클래스)
     5. [프로토콜](#프로토콜)
-    6. 델리게이트
+    6. [델리게이트](#델리게이트)
 2. [주석](#주석)
 3. [띄어쓰기](#띄어쓰기)
 4. 코드 구성
@@ -227,6 +227,42 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
       }
       ```
     </details>
+
+### 델리게이트
+- protocol을 이용해 delegate 패턴을 구현합니다.
+- 함수의 첫번째 인자는 생략가능한 델리게이트의 소스 객체를 사용합니다.
+   - **Good ✅**
+        ```swift
+            // 델리게이트의 소스 객체만을 메서드의 인자로 받는 경우
+            protocol UserScrollViewDelegate {
+                func scrollViewDidScroll(_ scrollView: UIScrollView)
+                func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool
+            }
+
+            // 델리게이트의 소스 객체 다음에 추가적인 인자를 받는 경우
+            protocol UserTableViewDelegate {
+                func tableView(
+                    _ tableView: UITableView,
+                    willDisplayCell cell: Cell,
+                    cellForRowAt indexPath: IndexPath)
+                )
+                func tableView(
+                    _ tableView: UITableView,
+                    numberOfRowsInSection section: Int) -> Int
+                )
+            }
+        ```
+    - **Bad ❌**
+        ```swift
+            protocol UserViewDelegate {
+                // 인자를 생략한 경우
+                func didScroll()
+                // 델리게이트의 소스 객체를 인수로 사용하지 않은 경우
+                func willDisplay(cell: Cell)
+                // 함수명을 UpperCamelCase로 작성한 경우, 다른 클래스가 존재하면 컴파일 오류 발생
+                func UserScrollView(_ scrollView: UIScrollView)
+            }  
+        ```
 
 ## 주석
 > 주석은 협업에 있어 가독성을 높이고 다른 사람의 코드를 이해하는 중요한 도구입니다. 
