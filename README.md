@@ -550,28 +550,28 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
   <details>
       <summary>예제코드</summary>
       
-      - **Good ✅**
+    - **Good ✅**
         ```swift
         import Alamofire
         import Foundation
         import SnapKit
         ```
-      
-      - **Bad ❌**
+    - **Bad ❌**
         ```swift
         import Foundation
 
         import SnapKit
         import Alamofire
         import Foundation
-        ``` 
+        ```
+
   </details>
 
 - `Computed properties`와 `property observers`가 있는 `property`는 같은 종류의 선언 집합 끝에 나타나야 합니다.
   <details>
       <summary>예제코드</summary>
-      
-      - **Good ✅**
+
+    - **Good ✅**
         ```swift
         var gravity: CGFloat
         var atmosphere: Atmosphere {
@@ -580,8 +580,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
             }
         }
         ```
-      
-      - **Bad ❌**
+    - **Bad ❌**
         ```swift
         var atmosphere: Atmosphere {
             didSet {
@@ -589,7 +588,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
             }
         }
         var gravity: CGFloat
-        ``` 
+        ```
+
   </details>
 
 ## Reference
