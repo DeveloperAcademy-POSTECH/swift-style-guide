@@ -647,7 +647,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
         struct Item: View {
             @State private var isFavorite: Bool = false
             var body: some View {
-                FavoriteButton()
+                FavoriteButton
             }
 
             @ViewBuilder
