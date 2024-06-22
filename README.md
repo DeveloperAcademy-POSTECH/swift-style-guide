@@ -596,7 +596,7 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
 ## SwiftUI
 ### View 선언 방법
-- 모든 뷰는 `Struct`로 정의하는 것을 권장합니다. `ViewBuilder` function이나 computed property로 정의하는 것은 지양합니다.
+- 모든 뷰는 `Struct`로 정의하는 것을 권장합니다. `@ViewBuilder` function이나 computed property로 정의하는 것은 지양합니다.
   - 이를 통해 State와 Binding 등의 관계가 명확히 정의됩니다. 해당 뷰의 구현부를 보지 않고도 역할을 짐작할 수 있습니다.
   - function이나 computed property로 정의했을 때, 이를 다른 뷰에서도 재사용할 수 있게 바꾸려면 추가적인 작업이 필수입니다. 미리 struct로 정의해두면 이런 일을 방지할 수 있습니다.
   <br>
