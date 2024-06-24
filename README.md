@@ -34,6 +34,8 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
     2. [타입 어노테이션](#타입-어노테이션)
 10. [메모리 관리](#메모리-관리)
 11. [파일관리](#파일관리)
+12. [SwiftUI](#SwiftUI)
+    1. [View 선언 방법](#View-선언-방법)
 
 
 ## 네이밍
@@ -592,9 +594,171 @@ Apple Developer Academy의 개발자들이 따르고 있는 스위프트 스타�
 
   </details>
 
+## SwiftUI
+### View 선언 방법
+- 모든 뷰는 `Struct`로 정의하는 것을 권장합니다. `@ViewBuilder` function이나 computed property로 정의하는 것은 지양합니다.
+  - 이를 통해 State와 Binding 등의 관계가 명확히 정의됩니다. 해당 뷰의 구현부를 보지 않고도 역할을 짐작할 수 있습니다.
+  - function이나 computed property로 정의했을 때, 이를 다른 뷰에서도 재사용할 수 있게 바꾸려면 추가적인 작업이 필수입니다. 미리 struct로 정의해두면 이런 일을 방지할 수 있습니다.
+  <br>
+
+  <details>
+      <summary>예제코드</summary>
+
+    - **Good ✅**
+        ```swift
+        struct Item: View {
+            @State private var isFavorite: Bool = false
+            var body: some View {
+                FavoriteButton(isFavorite: $isFavorite)
+            }
+
+            struct FavoriteButton: View { // ✅ extension을 사용해서 정의해도 무방합니다
+                @Binding var isFavorite: Bool
+                var body: some View {
+                    Button {
+                        isFavorite.toggle()
+                    } label: {
+                        ...
+                    }
+                }
+            }
+        }
+        ```
+    - **Bad ❌** : `@ViewBuilder Function`
+        ```swift
+        struct Item: View {
+            @State private var isFavorite: Bool = false
+            var body: some View {
+                FavoriteButton()
+            }
+
+            @ViewBuilder
+            private func FavoriteButton() -> some View { // ❌
+                Button {
+                    isFavorite.toggle()
+                } label: {
+                    ...
+                }
+            }
+        }
+        ```
+    - **Bad ❌** : `computed property`
+        ```swift
+        struct Item: View {
+            @State private var isFavorite: Bool = false
+            var body: some View {
+                FavoriteButton
+            }
+
+            @ViewBuilder
+            var FavoriteButton: some View { // ❌
+                Button {
+                    isFavorite.toggle()
+                } label: {
+                    ...
+                }
+            }
+        }
+        ```
+  </details>
+- 하나의 뷰 Struct에서 [레이아웃 컨테이너](https://developer.apple.com/documentation/swiftui/layout-fundamentals)(VStack, HStack, ZStack, Grid 등)는 최대 1개까지만 사용하는 것을 권장합니다.
+  - 레이아웃 컨테이너를 2개 이상 겹치게 되면 배치의 방향성이 일관되지 않게 되므로 코드의 가독성이 매우 떨어집니다. 각 배치 방향이 무엇을 의미하는지 이름을 결정해두면 가독성이 더 좋아집니다.
+  - 레이아웃 컨테이너는 남발되기 매우 쉽습니다. 레이아웃 컨테이너를 기준으로 뷰를 분리하는 과정에서 불필요한 레이아웃 컨테이너를 발견할 확률을 높일 수 있습니다.
+  <br>
+
+  <details>
+      <summary>예제코드</summary>
+
+    - **Good ✅**
+        ```swift
+        struct Articles: View {
+            var body: some View {
+                VStack {
+                    Text("Featured")
+                    FeaturedArticles() // ✅
+                    Divider()
+                    Text("All Articles")
+                    AllArticles() // ✅
+                }
+            }
+
+            struct FeaturedArticles: View { // ✅
+                var body: some View {
+                    HStack {
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                    }
+                }
+            }
+
+            struct AllArticles: View { // ✅
+                var body: some View {
+                    HStack {
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                    }
+                }
+            }
+        }
+        ```
+    - **Bad ❌**
+        ```swift
+        struct Articles: View {
+            var body: some View {
+                VStack {
+                    Text("Featured")
+                    HStack { // ❌
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                    }
+                    Divider()
+                    Text("All Articles")
+                    HStack { // ❌
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                        NavigationLink {
+                            ...
+                        } label: {
+                            ...
+                        }
+                    }
+                }
+            }
+        }
+        ```
+  </details>
+
 ## Reference
 - [Google Swift Style Guide](https://google.github.io/swift/)
 - [Airbnb Swift Style Guide](https://github.com/airbnb/swift)
 - [Linkedin Swift Style Guide](https://github.com/linkedin/swift-style-guide)
 - [Raywenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
 - [StyleShare Swift Style Guide](https://github.com/StyleShare/swift-style-guide#%EC%B5%9C%EB%8C%80-%EC%A4%84-%EA%B8%B8%EC%9D%B4)
+- [Channel Talk Swift Code Convention Guide](https://github.com/channel-io/ios-convention-guide)
